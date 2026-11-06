@@ -1,0 +1,53 @@
+/* ==================================================================
+ * easywin32.rc - resources for EasyWin32 1.04
+ * ------------------------------------------------------------------
+ * Optional but recommended: compile this file into your program to
+ * get the EasyWin32 icon (title bar, taskbar, Alt+Tab) and the
+ * version information in the file properties. Without it, the app
+ * still works; the library falls back to the standard icon.
+ *
+ * Keep easywin32.ico in the same directory when compiling.
+ * Visual Studio: just add this file to the project.
+ * MSVC command line:  rc easywin32.rc        (then link easywin32.res)
+ * MinGW:              windres easywin32.rc -O coff -o easywin32.res
+ * Borland:            brc32 -fo easywin32.res easywin32.rc
+ * Watcom:             wrc easywin32.rc       (produces easywin32.res)
+ * ================================================================== */
+
+#include <windows.h>
+
+/* Icon: numeric ID 1 (the library looks for ID 1 first, then "A") */
+1 ICON "easywin32.ico"
+
+/* Version resource: what the file properties and About box report */
+1 VERSIONINFO
+FILEVERSION     1,0,4,0
+PRODUCTVERSION  1,0,4,0
+FILEFLAGSMASK   0x3fL
+#ifdef _DEBUG
+FILEFLAGS       0x1L
+#else
+FILEFLAGS       0x0L
+#endif
+FILEOS          0x40004L
+FILETYPE        0x1L
+FILESUBTYPE     0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName",      "Javier Gutierrez Chamorro (Guti)"
+            VALUE "FileDescription", "EasyWin32 - a modern EasyWin for Win32/Win64"
+            VALUE "FileVersion",     "1.04"
+            VALUE "InternalName",    "easywin32"
+            VALUE "OriginalFilename",""
+            VALUE "ProductName",     "EasyWin32"
+            VALUE "ProductVersion",  "1.04"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

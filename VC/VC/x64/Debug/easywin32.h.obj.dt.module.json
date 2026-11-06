@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "VC\\x64\\Debug\\easywin32.obj",
+            "outputs": [
+                "VC\\x64\\Debug\\easywin32.h.obj.dt.module.json",
+                "VC\\x64\\Debug\\easywin32.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}
