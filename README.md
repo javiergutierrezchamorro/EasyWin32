@@ -4,6 +4,9 @@ Version **1.04**.
 
 It recreates the idea of Borland C++'s **EasyWin** library (which only ever worked on Win16): recompile DOS-style text applications as Windows **GUI** applications, with the output painted into an 80×25 (resizable) text window with colors, cursor and keyboard.
 
+<img width="802" height="452" alt="screenshot" src="https://github.com/user-attachments/assets/0d6237d2-ca52-4578-863c-7d2b990d142e" />
+
+
 It also adds the extras Microsoft's **QuickWin** used to provide over EasyWin: a classic menu bar (File / Edit / View / Help), mouse text selection and clipboard copy/paste.
 
 It is **pure ANSI C on top of the Win32 API**, with no compiler-specific extensions, so it compiles for 32 and 64 bits with:
